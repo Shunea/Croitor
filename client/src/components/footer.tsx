@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import clinicLogo from "@assets/croitor - logo_1760712042030.jpg";
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -33,10 +34,12 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-xl font-bold text-primary-foreground">
-                  C
-                </span>
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                <img
+                  src={clinicLogo}
+                  alt="CDC Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <div className="font-bold text-lg text-foreground leading-tight">

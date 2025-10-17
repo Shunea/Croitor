@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import clinicLogo from "@assets/croitor - logo_1760712042030.jpg";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,14 +55,12 @@ export function Navigation() {
             className="flex items-center gap-3 hover-elevate rounded-lg px-3 py-2 -ml-3"
             data-testid="button-logo"
           >
-            <div
-              className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
-                isScrolled
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-white text-primary"
-              }`}
-            >
-              <span className="text-2xl font-bold">C</span>
+            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+              <img
+                src={clinicLogo}
+                alt="CDC Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="hidden sm:block">
               <div
