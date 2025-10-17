@@ -2,53 +2,53 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { X } from "lucide-react";
 
-// Import imagini cazuri clinice
-import dentalWhitening from "@assets/stock_images/dental_before_after__bdc6ed61.jpg";
-import orthodonticBraces from "@assets/stock_images/orthodontic_treatmen_e59cd02d.jpg";
-import smileMakeover from "@assets/stock_images/dental_smile_makeove_faa950fe.jpg";
-import dentalVeneers from "@assets/stock_images/dental_veneers_befor_0e01e02d.jpg";
-import invisalign from "@assets/stock_images/orthodontic_treatmen_00e685d0.jpg";
-import fullRehabilitation from "@assets/stock_images/dental_smile_makeove_ce0b13be.jpg";
+// Import imagini cazuri clinice medicale
+import orthodonticBraces from "@assets/stock_images/dental_braces_orthod_ae663b9a.jpg";
+import teethWhitening from "@assets/stock_images/professional_teeth_w_455b497a.jpg";
+import dentalImplant from "@assets/stock_images/dental_implant_surge_bb040614.jpg";
+import ceramicVeneers from "@assets/stock_images/ceramic_dental_venee_06e33649.jpg";
+import dentalCrown from "@assets/stock_images/dental_crown_prosthe_967abcc4.jpg";
+import invisalignTreatment from "@assets/stock_images/invisalign_clear_ali_1a784e64.jpg";
 
 export function PortfolioSection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const cases = [
     {
-      title: "Tratament Ortodontic Complet",
-      description: "Transformare completă cu bretele dentare - rezultate spectaculoase după 18 luni de tratament ortodontic personalizat",
+      title: "Tratament Ortodontic cu Bracheți",
+      description: "Corectare dentiție cu bracheți metalici performanți - rezultate spectaculoase după 18 luni. Oferim și soluții cu fațete dentare (cape) pentru cazuri estetice complexe.",
       category: "Ortodonție",
       image: orthodonticBraces,
     },
     {
-      title: "Albire Dentară Profesională",
-      description: "Rezultate spectaculoase de albire - zâmbet strălucitor obținut prin albire profesională cu laser",
+      title: "Albire Dentară Profesională cu Laser",
+      description: "Tratament de albire cu aparat ultraviolet (UV) - zâmbet strălucitor obținut prin procedură profesională cu rezultate imediate și durabile.",
       category: "Estetică Dentară",
-      image: dentalWhitening,
+      image: teethWhitening,
     },
     {
-      title: "Reconstrucție Estetică Completă",
-      description: "Transformare totală cu fațete și coroane ceramice - zâmbet perfect proiectat digital",
-      category: "Protezare",
-      image: smileMakeover,
+      title: "Implant Dentar Chirurgical",
+      description: "Procedură de implantologie dentară - înlocuire permanentă a dintelui lipsă cu implant din titan biocompatibil de calitate superioară.",
+      category: "Implantologie",
+      image: dentalImplant,
     },
     {
       title: "Fațete Ceramice Premium",
-      description: "Fațete din porțelan de înaltă calitate pentru un zâmbet natural și strălucitor",
+      description: "Fațete din porțelan de înaltă calitate (cape dentare) - soluție estetică pentru un zâmbet perfect și natural, rezistent în timp.",
       category: "Estetică Dentară",
-      image: dentalVeneers,
+      image: ceramicVeneers,
     },
     {
-      title: "Corectare Invizibilă",
-      description: "Aliniere perfectă cu sistem invizibil - tratament discret și eficient fără bretele metalice",
-      category: "Ortodonție",
-      image: invisalign,
-    },
-    {
-      title: "Reabilitare Orală Completă",
-      description: "Zâmbet nou cu proteze fixe și implanturi - soluție durabilă pentru reabilitare totală",
+      title: "Coroane Dentare din Ceramică",
+      description: "Protezare cu coroane ceramice - restaurare completă a dinților deteriorați cu materiale premium biocompatibile.",
       category: "Protezare",
-      image: fullRehabilitation,
+      image: dentalCrown,
+    },
+    {
+      title: "Aparat Invizibil (Invisalign)",
+      description: "Corectare ortodontică discretă cu aparat transparent - aliniere perfectă fără bracheți vizibili, confort maxim în tratament.",
+      category: "Ortodonție",
+      image: invisalignTreatment,
     },
   ];
 
@@ -79,7 +79,7 @@ export function PortfolioSection() {
               <div className="aspect-[4/3] relative overflow-hidden">
                 <img
                   src={caseItem.image}
-                  alt={`${caseItem.title} - Înainte și după transformare ${caseItem.category} - Croitor Dental Clinic Chișinău`}
+                  alt={`${caseItem.title} - Procedură ${caseItem.category} - Croitor Dental Clinic Chișinău`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
@@ -107,7 +107,7 @@ export function PortfolioSection() {
 
         <div className="mt-8 sm:mt-12 text-center">
           <p className="text-muted-foreground text-xs sm:text-sm px-4">
-            * Fotografiile reprezintă cazuri clinice de tratamente dentare profesionale similare cu cele realizate de echipa noastră
+            * Fotografiile reprezintă proceduri stomatologice profesionale similare cu cele realizate în clinica noastră
           </p>
         </div>
       </div>
@@ -129,7 +129,7 @@ export function PortfolioSection() {
               <div className="relative flex-shrink-0 max-h-[60vh]">
                 <img
                   src={cases[selectedImage].image}
-                  alt={`${cases[selectedImage].title} - Înainte și după transformare ${cases[selectedImage].category} - Croitor Dental Clinic Chișinău`}
+                  alt={`${cases[selectedImage].title} - Procedură ${cases[selectedImage].category} - Croitor Dental Clinic Chișinău`}
                   className="w-full h-full object-contain"
                 />
               </div>
