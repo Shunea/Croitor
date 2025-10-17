@@ -48,14 +48,14 @@ export function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-3 hover-elevate rounded-lg px-3 py-2 -ml-3"
+            className="flex items-center gap-2 sm:gap-3 hover-elevate rounded-lg px-2 py-1 sm:px-3 sm:py-2 -ml-2 sm:-ml-3"
             data-testid="button-logo"
           >
-            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center flex-shrink-0">
               <img
                 src={clinicLogo}
                 alt="CDC Logo"
@@ -64,7 +64,7 @@ export function Navigation() {
             </div>
             <div className="hidden sm:block">
               <div
-                className={`font-bold text-lg leading-tight transition-colors ${
+                className={`font-bold text-base sm:text-lg leading-tight transition-colors ${
                   isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
@@ -131,17 +131,17 @@ export function Navigation() {
             data-testid="button-mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
             )}
           </button>
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border">
-          <div className="px-4 py-6 space-y-4">
+        <div className="md:hidden bg-background border-t border-border w-full">
+          <div className="px-4 py-6 space-y-4 max-w-7xl mx-auto">
             {navLinks.map((link) => (
               <button
                 key={link.id}
