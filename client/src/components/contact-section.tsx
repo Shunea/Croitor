@@ -61,24 +61,24 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 space-y-4">
-          <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-background overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Contact
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
             Solicită o consultație și scapă rapid de problemele dentare!
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             Completează formularul de contact și împărtășește-ne nevoile tale.
             Unul dintre specialiștii noștri te va contacta rapid.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-          <Card className="p-6 md:p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+          <Card className="p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
               Trimite-ne un mesaj
             </h3>
             <Form {...form}>
@@ -179,9 +179,9 @@ export function ContactSection() {
             </Form>
           </Card>
 
-          <div className="space-y-6">
-            <Card className="p-6 md:p-8 space-y-6">
-              <h3 className="text-2xl font-bold text-foreground">
+          <div className="space-y-4 sm:space-y-6">
+            <Card className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                 Informații de contact
               </h3>
 
@@ -305,11 +305,11 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="mt-8 md:mt-12 rounded-2xl overflow-hidden shadow-lg">
+        <div className="mt-6 sm:mt-8 md:mt-12 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.861825449825!2d28.833889776556747!3d47.01064202671487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97ddc5a9f2f95%3A0x2d9c7e6a5c3f1d4b!2sStrada%20Miori%C8%9Ba%2014%2C%20Chi%C8%99in%C4%83u%2C%20Moldova!5e0!3m2!1sro!2s!4v1697542800000!5m2!1sro!2s"
             width="100%"
-            height="400"
+            height="300"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"

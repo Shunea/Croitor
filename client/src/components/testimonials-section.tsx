@@ -42,48 +42,48 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 space-y-4">
-          <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+    <section className="py-12 sm:py-16 md:py-24 bg-card overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Testimoniale
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
             Doar pacienți mulțumiți – experiențe care vorbesc!
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             Descoperă ce spun pacienții noștri despre experiența lor la Croitor
             Dental Clinic
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-6 md:p-8 hover-elevate transition-all duration-300 relative"
+              className="p-4 sm:p-6 md:p-8 hover-elevate transition-all duration-300 relative"
               data-testid={`card-testimonial-${index}`}
             >
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/10" />
-              <div className="space-y-4 relative">
+              <Quote className="absolute top-4 sm:top-6 right-4 sm:right-6 w-6 h-6 sm:w-8 sm:h-8 text-primary/10" />
+              <div className="space-y-3 sm:space-y-4 relative">
                 <div className="flex gap-1">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-primary text-primary"
+                      className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary"
                     />
                   ))}
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed italic">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed italic">
                   "{testimonial.text}"
                 </p>
 
-                <div className="pt-4 border-t border-border">
-                  <div className="font-semibold text-foreground">
+                <div className="pt-3 sm:pt-4 border-t border-border">
+                  <div className="text-sm sm:text-base font-semibold text-foreground">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     {testimonial.treatment}
                   </div>
                 </div>
