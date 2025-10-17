@@ -107,15 +107,15 @@ Note: For Gmail, you need to use an App Password, not your regular password. Cre
 - **Interactions**: Smooth hover effects and transitions
 
 ## Portfolio Clinical Cases
-The portfolio section showcases 6 professional dental transformation cases:
-1. **Orthodontic Treatment** - Complete braces transformation (18 months)
-2. **Professional Teeth Whitening** - Laser whitening spectacular results
-3. **Complete Aesthetic Reconstruction** - Veneers and ceramic crowns
-4. **Premium Ceramic Veneers** - High-quality porcelain for natural smile
-5. **Invisible Alignment** - Discreet orthodontic treatment without metal braces
-6. **Full Oral Rehabilitation** - Complete restoration with fixed prosthetics and implants
+The portfolio section showcases 6 professional dental procedures with medical-grade imagery:
+1. **Tratament Ortodontic cu Bracheți** - Metal braces treatment with mention of dental veneers (caps)
+2. **Albire Dentară Profesională cu Laser** - UV/laser teeth whitening procedure
+3. **Implant Dentar Chirurgical** - Surgical dental implant procedure with titanium biocompatible implants
+4. **Fațete Ceramice Premium** - Ceramic veneers (dental caps) from high-quality porcelain
+5. **Coroane Dentare din Ceramică** - Ceramic dental crowns for tooth restoration
+6. **Aparat Invizibil (Invisalign)** - Invisible aligners for discreet orthodontic treatment
 
-All images are professionally sourced and include SEO-optimized alt text with clinic location.
+All images are medical/dental professional stock photos focused on oral area showing actual procedures. Include SEO-optimized alt text with clinic location.
 
 ## Website Status
 ✅ **COMPLETE & READY FOR DEPLOYMENT**
