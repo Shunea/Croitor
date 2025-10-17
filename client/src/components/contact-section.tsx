@@ -76,13 +76,13 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 max-w-full">
-          <Card className="p-4 sm:p-6 md:p-8 w-full min-w-0">
-            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-full">
+          <Card className="p-4 sm:p-5 md:p-6 w-full min-w-0">
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4">
               Trimite-ne un mesaj
             </h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="name"
@@ -179,13 +179,13 @@ export function ContactSection() {
             </Form>
           </Card>
 
-          <div className="space-y-4 sm:space-y-6 w-full min-w-0">
-            <Card className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 w-full min-w-0">
+          <div className="space-y-4 w-full min-w-0">
+            <Card className="p-4 sm:p-5 md:p-6 space-y-4 w-full min-w-0">
               <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
                 Informații de contact
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <a
                   href="https://maps.google.com/?q=Str.+Mioriță+14,+Chișinău"
                   target="_blank"
@@ -252,8 +252,8 @@ export function ContactSection() {
                 </a>
               </div>
 
-              <div className="pt-6 border-t border-border">
-                <div className="font-semibold text-foreground mb-4">
+              <div className="pt-4 border-t border-border">
+                <div className="font-semibold text-foreground mb-3">
                   Urmărește-ne pe social media
                 </div>
                 <div className="flex gap-3">
@@ -279,26 +279,26 @@ export function ContactSection() {
               </div>
             </Card>
 
-            <Card className="p-6 md:p-8 bg-primary/5 border-primary/20 w-full min-w-0">
-              <h4 className="font-semibold text-foreground mb-3">
+            <Card className="p-4 sm:p-5 md:p-6 bg-primary/5 border-primary/20 w-full min-w-0">
+              <h4 className="font-semibold text-foreground mb-2">
                 Program de lucru
               </h4>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-1.5 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Luni - Vineri</span>
-                  <span className="font-medium text-foreground">
+                  <span className="text-foreground">
                     09:00 - 18:00
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Sâmbătă</span>
-                  <span className="font-medium text-foreground">
+                  <span className="text-foreground">
                     10:00 - 15:00
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Duminică</span>
-                  <span className="font-medium text-foreground">Închis</span>
+                  <span className="text-foreground">Închis</span>
                 </div>
               </div>
             </Card>
