@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Award } from "lucide-react";
-import drAlexeiImage from "@assets/alexei - croitor_1760712024480.jpg";
-import drLilianaImage from "@assets/croitor - liliana_1760712024480.jpg";
+import drAlexeiImage from "@assets/alexei croitor_1760712759542.jpeg";
+import drLilianaImage from "@assets/Croitor Liliana_1760712759542.jpeg";
 
 export function TeamSection() {
   const team = [
