@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { X } from "lucide-react";
 
@@ -12,6 +12,17 @@ import invisalignTreatment from "@assets/stock_images/invisalign_clear_ali_1a784
 
 export function PortfolioSection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (selectedImage !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
 
   const cases = [
     {
@@ -124,20 +135,20 @@ export function PortfolioSection() {
           >
             <X className="w-6 h-6" />
           </button>
-          <div className="max-w-6xl w-full max-h-[90vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
-            <div className="bg-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col max-h-full">
-              <div className="relative flex-shrink-0 max-h-[60vh]">
+          <div className="max-w-6xl w-full max-h-[90vh] flex flex-col overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <div className="bg-card rounded-xl sm:rounded-2xl overflow-y-auto flex flex-col max-h-full">
+              <div className="relative flex-shrink-0 max-h-[60vh] bg-black/50">
                 <img
                   src={cases[selectedImage].image}
                   alt={`${cases[selectedImage].title} - Procedură ${cases[selectedImage].category} - Croitor Dental Clinic Chișinău`}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="p-4 sm:p-6 md:p-8 space-y-2 sm:space-y-3 md:space-y-4 flex-shrink-0">
+              <div className="p-4 sm:p-6 md:p-8 space-y-2 sm:space-y-3 md:space-y-4 flex-shrink-0 bg-card">
                 <div className="text-xs sm:text-sm font-semibold text-primary">
                   {cases[selectedImage].category}
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-foreground">
                   {cases[selectedImage].title}
                 </h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
