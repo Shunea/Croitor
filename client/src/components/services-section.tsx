@@ -6,30 +6,68 @@ import {
   Activity,
   Scissors,
   Sparkles,
+  CheckCircle2,
 } from "lucide-react";
+import orthodonticsImage from "@assets/stock_images/orthodontic_treatmen_1b8e7584.jpg";
+import implantImage from "@assets/stock_images/dental_implant_surge_57321743.jpg";
+import aestheticImage from "@assets/stock_images/teeth_whitening_prof_67c405ae.jpg";
 
 export function ServicesSection() {
-  const services = [
+  const featuredServices = [
     {
-      icon: Smile,
-      title: "Ortodonție",
+      image: orthodonticsImage,
+      title: "Tratament Ortodontic Complet",
+      subtitle: "Ortodonție",
       description:
-        "Servicii specializate de ortodonție pentru corectarea și alinierea dinților. Oferim aparate dentare moderne, inclusiv bretele invizibile și sisteme de aliniere transparente pentru un zâmbet perfect și sănătos.",
-      keywords: "ortodonție Chișinău, bretele dentare, aliniere dinți",
+        "Transformare completă cu bretele dentare moderne pentru un zâmbet perfect aliniat.",
+      process: [
+        "Consultație și scanare 3D a dinților",
+        "Plan de tratament personalizat",
+        "Aplicarea bretelelor dentare",
+        "Control periodic și ajustări",
+        "Menținerea rezultatelor obținute",
+      ],
+      duration: "12-24 luni",
     },
+    {
+      image: implantImage,
+      title: "Implant Dentar și Coroană",
+      subtitle: "Implantologie",
+      description:
+        "Înlocuire dinți lipsă cu implanturi dentare durabile și coroană estetică.",
+      process: [
+        "Evaluare și radiografie CT 3D",
+        "Inserarea implantului dentar",
+        "Perioada de vindecare (3-6 luni)",
+        "Montarea pilierului și amprentă",
+        "Fixarea coroanei definitive",
+      ],
+      duration: "3-6 luni",
+    },
+    {
+      image: aestheticImage,
+      title: "Albire Dentară Profesională",
+      subtitle: "Estetică Dentară",
+      description:
+        "Rezultate spectaculoase de albire pentru un zâmbet strălucitor și încrezător.",
+      process: [
+        "Consultație și evaluare culoare",
+        "Curățare profesională pregătitoare",
+        "Aplicarea gelului de albire",
+        "Activare cu lampă LED specializată",
+        "Instrucțiuni pentru menținere",
+      ],
+      duration: "1-2 ședințe",
+    },
+  ];
+
+  const services = [
     {
       icon: Award,
       title: "Protezare Dentară",
       description:
         "Protezare dentară de înaltă calitate pentru restabilirea completă a funcționalității și aspectului zâmbetului dumneavoastră. Coroane, punți, proteze mobile și fixe realizate cu materiale premium.",
       keywords: "protezare dentară Moldova, coroane dentare, punți dentare",
-    },
-    {
-      icon: Stethoscope,
-      title: "Implantologie",
-      description:
-        "Implante dentare moderne pentru înlocuirea eficientă și durabilă a dinților lipsă. Utilizăm tehnologie avansată și materiale de top pentru rezultate garantate și un zâmbet impecabil pe termen lung.",
-      keywords: "implant dentar Chișinău, implantologie Moldova",
     },
     {
       icon: Activity,
@@ -66,14 +104,69 @@ export function ServicesSection() {
             Gamă complexă de servicii și tratamente stomatologice
           </h2>
           <p className="text-lg text-muted-foreground">
-            În clinica stomatologică Croitor Dental Clinic din Chișinău, ai
-            parte de tratamente și servicii stomatologice complexe și
-            personalizate, adaptate nevoilor tale specifice și desfășurate
-            într-un mediu primitor și profesional.
+            Descoperì rezultatele remarcabile obținute în tratamentele dentare pe care le oferim.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="space-y-8 md:space-y-12 mb-12 md:mb-16">
+          {featuredServices.map((service, index) => (
+            <Card
+              key={index}
+              className="overflow-hidden hover-elevate transition-all duration-300"
+              data-testid={`card-featured-service-${index}`}
+            >
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:p-8 lg:p-10 space-y-6">
+                  <div className="space-y-3">
+                    <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                      {service.subtitle}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 pt-4 border-t border-border">
+                    <h4 className="font-semibold text-foreground flex items-center gap-2">
+                      <Activity className="w-5 h-5 text-primary" />
+                      Procesul de tratament
+                    </h4>
+                    <div className="space-y-3">
+                      {service.process.map((step, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground text-sm">
+                            {step}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="pt-4 flex items-center gap-2 text-sm">
+                      <span className="font-semibold text-foreground">
+                        Durată:
+                      </span>
+                      <span className="text-primary font-medium">
+                        {service.duration}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
