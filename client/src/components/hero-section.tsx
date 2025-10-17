@@ -34,11 +34,7 @@ export function HeroSection() {
         <div className="text-center space-y-6 sm:space-y-8">
           <div className="space-y-3 sm:space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-tight px-2">
-              Succesul nostru, este
-              <br />
-              <span className="text-primary-foreground">
-                Zâmbetul Fericit al vostru
-              </span>
+              La <span className="text-primary-foreground">Croitor Dental Clinic</span> succesul nostru este zâmbetul vostru fericit!
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-4">
               Clinică stomatologică modernă cu peste 20 de ani experiență în
