@@ -54,16 +54,28 @@ export function Navigation() {
             className="flex items-center gap-3 hover-elevate rounded-lg px-3 py-2 -ml-3"
             data-testid="button-logo"
           >
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary-foreground">
-                C
-              </span>
+            <div
+              className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
+                isScrolled
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-white text-primary"
+              }`}
+            >
+              <span className="text-2xl font-bold">C</span>
             </div>
             <div className="hidden sm:block">
-              <div className="font-bold text-lg text-foreground leading-tight">
+              <div
+                className={`font-bold text-lg leading-tight transition-colors ${
+                  isScrolled ? "text-foreground" : "text-white"
+                }`}
+              >
                 Croitor Dental Clinic
               </div>
-              <div className="text-xs text-muted-foreground">
+              <div
+                className={`text-xs transition-colors ${
+                  isScrolled ? "text-muted-foreground" : "text-white/80"
+                }`}
+              >
                 Zâmbetul Tău Fericit
               </div>
             </div>
@@ -74,7 +86,11 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors hover-elevate px-3 py-2 rounded-md"
+                className={`text-sm font-medium transition-colors hover-elevate px-3 py-2 rounded-md ${
+                  isScrolled
+                    ? "text-foreground/80 hover:text-primary"
+                    : "text-white/90 hover:text-white"
+                }`}
                 data-testid={`link-${link.id}`}
               >
                 {link.label}
@@ -85,7 +101,11 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+37378005754"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                isScrolled
+                  ? "text-muted-foreground hover:text-primary"
+                  : "text-white/90 hover:text-white"
+              }`}
               data-testid="link-phone"
             >
               <Phone className="w-4 h-4" />
@@ -93,6 +113,11 @@ export function Navigation() {
             </a>
             <Button
               onClick={() => scrollToSection("contact")}
+              className={
+                !isScrolled
+                  ? "bg-white text-primary hover:bg-white/90 border-white"
+                  : ""
+              }
               data-testid="button-appointment"
             >
               Programează-te
@@ -101,7 +126,9 @@ export function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden hover-elevate active-elevate-2 p-2 rounded-lg"
+            className={`md:hidden hover-elevate active-elevate-2 p-2 rounded-lg transition-colors ${
+              isScrolled ? "text-foreground" : "text-white"
+            }`}
             data-testid="button-mobile-menu"
           >
             {isMobileMenuOpen ? (
