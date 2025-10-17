@@ -15,49 +15,22 @@ import aestheticImage from "@assets/stock_images/teeth_whitening_prof_67c405ae.j
 export function ServicesSection() {
   const featuredServices = [
     {
-      image: orthodonticsImage,
+      number: "1",
       title: "Tratament Ortodontic Complet",
       subtitle: "Ortodonție",
-      description:
-        "Transformare completă cu bretele dentare moderne pentru un zâmbet perfect aliniat.",
-      process: [
-        "Consultație și scanare 3D a dinților",
-        "Plan de tratament personalizat",
-        "Aplicarea bretelelor dentare",
-        "Control periodic și ajustări",
-        "Menținerea rezultatelor obținute",
-      ],
-      duration: "12-24 luni",
+      description: "Transformare completă cu bretele dentare",
     },
     {
-      image: implantImage,
+      number: "2",
       title: "Implant Dentar și Coroană",
       subtitle: "Implantologie",
-      description:
-        "Înlocuire dinți lipsă cu implanturi dentare durabile și coroană estetică.",
-      process: [
-        "Evaluare și radiografie CT 3D",
-        "Inserarea implantului dentar",
-        "Perioada de vindecare (3-6 luni)",
-        "Montarea pilierului și amprentă",
-        "Fixarea coroanei definitive",
-      ],
-      duration: "3-6 luni",
+      description: "Înlocuire dinți lipsă cu implant",
     },
     {
-      image: aestheticImage,
+      number: "3",
       title: "Albire Dentară Profesională",
       subtitle: "Estetică Dentară",
-      description:
-        "Rezultate spectaculoase de albire pentru un zâmbet strălucitor și încrezător.",
-      process: [
-        "Consultație și evaluare culoare",
-        "Curățare profesională pregătitoare",
-        "Aplicarea gelului de albire",
-        "Activare cu lampă LED specializată",
-        "Instrucțiuni pentru menținere",
-      ],
-      duration: "1-2 ședințe",
+      description: "Rezultate spectaculoase de albire",
     },
   ];
 
@@ -108,59 +81,30 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="space-y-8 md:space-y-12 mb-12 md:mb-16">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {featuredServices.map((service, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover-elevate transition-all duration-300"
+              className="overflow-hidden hover-elevate transition-all duration-300 relative"
               data-testid={`card-featured-service-${index}`}
             >
-              <div className="grid md:grid-cols-2 gap-0">
-                <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-muted">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 md:p-8 lg:p-10 space-y-6">
-                  <div className="space-y-3">
-                    <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-                      {service.subtitle}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4 pt-4 border-t border-border">
-                    <h4 className="font-semibold text-foreground flex items-center gap-2">
-                      <Activity className="w-5 h-5 text-primary" />
-                      Procesul de tratament
-                    </h4>
-                    <div className="space-y-3">
-                      {service.process.map((step, idx) => (
-                        <div key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground text-sm">
-                            {step}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="pt-4 flex items-center gap-2 text-sm">
-                      <span className="font-semibold text-foreground">
-                        Durată:
-                      </span>
-                      <span className="text-primary font-medium">
-                        {service.duration}
-                      </span>
-                    </div>
+              <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center">
+                <span className="text-[120px] md:text-[140px] font-bold text-primary/10 absolute">
+                  {service.number}
+                </span>
+                <div className="absolute bottom-6 left-6">
+                  <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                    {service.subtitle}
                   </div>
                 </div>
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {service.description}
+                </p>
               </div>
             </Card>
           ))}
