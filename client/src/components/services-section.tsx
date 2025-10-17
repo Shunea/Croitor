@@ -70,21 +70,21 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 space-y-4">
-          <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+    <section id="services" className="py-12 sm:py-16 md:py-24 bg-card overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Serviciile Noastre
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
             Gamă complexă de servicii și tratamente stomatologice
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             Descoperì rezultatele remarcabile obținute în tratamentele dentare pe care le oferim.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16">
           {featuredServices.map((service, index) => (
             <Card
               key={index}
@@ -104,11 +104,11 @@ export function ServicesSection() {
                   </div>
                 </div>
               </div>
-              <div className="p-6 space-y-3">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">
+              <div className="p-4 sm:p-6 space-y-2 sm:space-y-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   {service.description}
                 </p>
               </div>
@@ -116,23 +116,23 @@ export function ServicesSection() {
           ))}
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card
                 key={index}
-                className="p-6 md:p-8 hover-elevate transition-all duration-300 group"
+                className="p-4 sm:p-6 md:p-8 hover-elevate transition-all duration-300 group"
                 data-testid={`card-service-${index}`}
               >
-                <div className="space-y-4">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-7 h-7 text-primary" />
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-foreground">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </div>
