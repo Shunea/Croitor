@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import aboutImage from "@assets/stock_images/dental_clinic_modern_9cc30d67.jpg";
+import aboutImage from "@assets/croitor_1760710964150.jpg";
 
 export function AboutSection() {
   const highlights = [
@@ -17,7 +17,7 @@ export function AboutSection() {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={aboutImage}
-                alt="Clinică Stomatologică Modernă Croitor Dental Clinic"
+                alt="Dr. Croitor Alexei și Dr. Croitor Liliana - Echipa Croitor Dental Clinic"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

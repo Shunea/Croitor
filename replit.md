@@ -81,11 +81,12 @@ The contact form sends email notifications to the clinic. Configure email creden
 Note: For Gmail, you need to use an App Password, not your regular password. Create one at: https://myaccount.google.com/apppasswords
 
 ## Recent Changes
-- **2025-01-17**: Initial website implementation with all sections
+- **2025-10-17**: Website implementation and image updates
   - Created all React components for home page
   - Implemented contact form with validation and email notifications
   - Added SEO meta tags and Open Graph tags
-  - Generated professional dental clinic images
+  - Integrated authentic team photos (Dr. Alexei, Dr. Liliana individual and together)
+  - Updated Google Maps with correct clinic location (Str. Miorița 14)
   - Configured medical design system (blues, whites, clean typography)
   - Integrated Nodemailer for contact form email notifications
 
