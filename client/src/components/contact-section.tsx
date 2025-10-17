@@ -76,8 +76,8 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
-          <Card className="p-4 sm:p-6 md:p-8">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 max-w-full">
+          <Card className="p-4 sm:p-6 md:p-8 w-full min-w-0">
             <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
               Trimite-ne un mesaj
             </h3>
@@ -179,8 +179,8 @@ export function ContactSection() {
             </Form>
           </Card>
 
-          <div className="space-y-4 sm:space-y-6">
-            <Card className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
+          <div className="space-y-4 sm:space-y-6 w-full min-w-0">
+            <Card className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 w-full min-w-0">
               <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
                 Informații de contact
               </h3>
@@ -200,7 +200,7 @@ export function ContactSection() {
                     <div className="font-semibold text-foreground mb-1">
                       Adresă
                     </div>
-                    <div className="text-muted-foreground">
+                    <div className="text-muted-foreground break-words">
                       Str. Miorița 14
                       <br />
                       Chișinău, Republica Moldova
@@ -217,14 +217,14 @@ export function ContactSection() {
                     <div className="space-y-1">
                       <a
                         href="tel:+37378005754"
-                        className="block text-muted-foreground hover:text-primary transition-colors"
+                        className="block text-muted-foreground hover:text-primary transition-colors break-all"
                         data-testid="link-phone-1"
                       >
                         +373 78 00 57 54
                       </a>
                       <a
                         href="tel:+37360511388"
-                        className="block text-muted-foreground hover:text-primary transition-colors"
+                        className="block text-muted-foreground hover:text-primary transition-colors break-all"
                         data-testid="link-phone-2"
                       >
                         +373 60 51 13 88
@@ -245,7 +245,7 @@ export function ContactSection() {
                     <div className="font-semibold text-foreground mb-1">
                       Email
                     </div>
-                    <div className="text-muted-foreground">
+                    <div className="text-muted-foreground break-all">
                       croitor.dental.clinic@gmail.com
                     </div>
                   </div>
@@ -279,7 +279,7 @@ export function ContactSection() {
               </div>
             </Card>
 
-            <Card className="p-6 md:p-8 bg-primary/5 border-primary/20">
+            <Card className="p-6 md:p-8 bg-primary/5 border-primary/20 w-full min-w-0">
               <h4 className="font-semibold text-foreground mb-3">
                 Program de lucru
               </h4>

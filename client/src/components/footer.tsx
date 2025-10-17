@@ -42,7 +42,7 @@ export function Footer() {
                 />
               </div>
               <div>
-                <div className="font-bold text-lg text-foreground leading-tight">
+                <div className="font-semibold text-lg text-foreground leading-tight">
                   Croitor Dental Clinic
                 </div>
               </div>
@@ -155,7 +155,7 @@ export function Footer() {
               </li>
             </ul>
             <div className="pt-2 text-sm">
-              <div className="font-medium text-foreground mb-2">
+              <div className="font-semibold text-foreground mb-2">
                 Program de lucru:
               </div>
               <div className="text-muted-foreground space-y-1 text-xs">
