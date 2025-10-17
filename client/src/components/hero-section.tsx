@@ -33,14 +33,14 @@ export function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 pt-32 sm:pt-40">
         <div className="text-center space-y-6 sm:space-y-8">
           <div className="space-y-3 sm:space-y-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-tight px-2">
               Succesul nostru, este
               <br />
               <span className="text-primary-foreground">
                 Zâmbetul Fericit al vostru
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto font-medium px-4">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-4">
               Clinică stomatologică modernă cu peste 20 de ani experiență în
               Chișinău
             </p>
@@ -72,7 +72,7 @@ export function HeroSection() {
               <div className="flex items-center justify-center mb-2 sm:mb-3">
                 <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">20+</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-white mb-1">20+</div>
               <div className="text-xs sm:text-sm text-white/80">Ani de Experiență</div>
             </div>
 
@@ -80,7 +80,7 @@ export function HeroSection() {
               <div className="flex items-center justify-center mb-2 sm:mb-3">
                 <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">1000+</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-white mb-1">1000+</div>
               <div className="text-xs sm:text-sm text-white/80">Pacienți Mulțumiți</div>
             </div>
 
@@ -88,7 +88,7 @@ export function HeroSection() {
               <div className="flex items-center justify-center mb-2 sm:mb-3">
                 <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-1">100%</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-white mb-1">100%</div>
               <div className="text-xs sm:text-sm text-white/80">Consultație Gratuită</div>
             </div>
           </div>

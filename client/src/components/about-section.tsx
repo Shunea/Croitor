@@ -29,7 +29,7 @@ export function AboutSection() {
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
                 Despre Noi
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
                 Ne dedicăm sănătății tale orale și frumuseții zâmbetului tău
               </h2>
             </div>
@@ -60,7 +60,7 @@ export function AboutSection() {
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start gap-2 sm:gap-3">
                   <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-foreground font-medium">
+                  <span className="text-sm sm:text-base text-foreground">
                     {highlight}
                   </span>
                 </div>

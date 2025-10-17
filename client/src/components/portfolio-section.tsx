@@ -59,7 +59,7 @@ export function PortfolioSection() {
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Portofoliu
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight px-2">
             Cazuri clinice și transformări ce schimbă zâmbete!
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">

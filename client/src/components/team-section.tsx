@@ -40,7 +40,7 @@ export function TeamSection() {
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Echipa Noastră
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight px-2">
             Cunoaște echipa noastră de medici stomatologi
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
@@ -72,10 +72,10 @@ export function TeamSection() {
                       {doctor.experience}
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground">
                     {doctor.name}
                   </h3>
-                  <p className="text-base sm:text-lg text-muted-foreground font-medium">
+                  <p className="text-base sm:text-lg text-muted-foreground">
                     {doctor.role}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ export function TeamSection() {
                 <div className="pt-2 sm:pt-4 space-y-2">
                   <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
                     <GraduationCap className="w-4 h-4 text-primary" />
-                    <span className="font-medium">Specializări:</span>
+                    <span>Specializări:</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {doctor.specializations.map((spec, idx) => (

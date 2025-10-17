@@ -64,7 +64,7 @@ export function Navigation() {
             </div>
             <div className="hidden sm:block">
               <div
-                className={`font-bold text-base sm:text-lg leading-tight transition-colors ${
+                className={`font-semibold text-base sm:text-lg leading-tight transition-colors ${
                   isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
@@ -85,7 +85,7 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`text-sm font-medium transition-colors hover-elevate px-3 py-2 rounded-md ${
+                className={`text-sm transition-colors hover-elevate px-3 py-2 rounded-md ${
                   isScrolled
                     ? "text-foreground/80 hover:text-primary"
                     : "text-white/90 hover:text-white"
@@ -100,7 +100,7 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+37378005754"
-              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+              className={`flex items-center gap-2 text-sm transition-colors ${
                 isScrolled
                   ? "text-muted-foreground hover:text-primary"
                   : "text-white/90 hover:text-white"
@@ -146,7 +146,7 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-3 text-base font-medium text-foreground hover-elevate rounded-lg"
+                className="block w-full text-left px-4 py-3 text-base text-foreground hover-elevate rounded-lg"
                 data-testid={`link-mobile-${link.id}`}
               >
                 {link.label}
@@ -155,7 +155,7 @@ export function Navigation() {
             <div className="pt-4 border-t border-border space-y-3">
               <a
                 href="tel:+37378005754"
-                className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-muted-foreground hover-elevate rounded-lg"
+                className="flex items-center gap-2 px-4 py-3 text-sm text-muted-foreground hover-elevate rounded-lg"
                 data-testid="link-mobile-phone"
               >
                 <Phone className="w-4 h-4" />

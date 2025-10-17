@@ -76,7 +76,7 @@ export function ServicesSection() {
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Serviciile Noastre
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight px-2">
             Gamă complexă de servicii și tratamente stomatologice
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
@@ -105,7 +105,7 @@ export function ServicesSection() {
                 </div>
               </div>
               <div className="p-4 sm:p-6 space-y-2 sm:space-y-3">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground">
                   {service.title}
                 </h3>
                 <p className="text-sm sm:text-base text-muted-foreground">

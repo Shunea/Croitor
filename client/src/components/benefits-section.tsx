@@ -33,7 +33,7 @@ export function BenefitsSection() {
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Beneficii
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight px-2">
             Da, la noi ai parte de beneficii de nerefuzat!
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
@@ -72,7 +72,7 @@ export function BenefitsSection() {
         <div className="mt-8 sm:mt-12 md:mt-16 bg-card rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border border-card-border">
           <div className="grid md:grid-cols-5 gap-6 sm:gap-8 items-center">
             <div className="md:col-span-3 space-y-3 sm:space-y-4">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground">
                 Cu noi, ai garanția că vei primi servicii de cea mai înaltă
                 calitate
               </h3>

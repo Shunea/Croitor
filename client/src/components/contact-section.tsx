@@ -67,7 +67,7 @@ export function ContactSection() {
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
             Contact
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight px-2">
             Solicită o consultație și scapă rapid de problemele dentare!
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
@@ -78,7 +78,7 @@ export function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           <Card className="p-4 sm:p-6 md:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
               Trimite-ne un mesaj
             </h3>
             <Form {...form}>
@@ -181,7 +181,7 @@ export function ContactSection() {
 
           <div className="space-y-4 sm:space-y-6">
             <Card className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+              <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
                 Informații de contact
               </h3>
 
