@@ -307,7 +307,7 @@ export function ContactSection() {
 
         <div className="mt-8 md:mt-12 rounded-2xl overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.8947!2d28.8386!3d47.0105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDAwJzM3LjgiTiAyOMKwNTAnMTkuMSJF!5e0!3m2!1sen!2s!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.861825449825!2d28.833889776556747!3d47.01064202671487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97ddc5a9f2f95%3A0x2d9c7e6a5c3f1d4b!2sStrada%20Miori%C8%9Ba%2014%2C%20Chi%C8%99in%C4%83u%2C%20Moldova!5e0!3m2!1sro!2s!4v1697542800000!5m2!1sro!2s"
             width="100%"
             height="400"
             style={{ border: 0 }}
