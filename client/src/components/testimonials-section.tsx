@@ -93,11 +93,11 @@ export function TestimonialsSection() {
         </div>
 
         <div className="mt-12 md:mt-16 text-center bg-background rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="flex items-center justify-center gap-8 flex-wrap">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                  4.9
+                  4.8
                 </div>
                 <div className="flex gap-1 mb-2 justify-center">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -105,7 +105,15 @@ export function TestimonialsSection() {
                   ))}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  Rating mediu
+                  Rating Google
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  45+
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Recenzii Google
                 </div>
               </div>
               <div className="text-center">
@@ -116,15 +124,17 @@ export function TestimonialsSection() {
                   Pacienți mulțumiți
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                  98%
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Recomandări
-                </div>
-              </div>
             </div>
+            <a
+              href="https://www.google.com/search?q=croitor+dental+clinic#lrd=0x40c97f11f575a1a9:0x4b3bdbc9cfbc91d8,1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover-elevate transition-all font-medium"
+              data-testid="link-google-reviews"
+            >
+              <Star className="w-5 h-5 fill-current" />
+              Citește toate recenziile pe Google
+            </a>
           </div>
         </div>
       </div>
