@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Clock } from "lucide-react";
-import heroImage from "@assets/generated_images/Modern_dental_clinic_hero_background_2e7b3a0c.png";
+import heroImage from "@assets/generated_images/Bright_modern_dental_clinic_hero_b677e2fc.png";
 
 export function HeroSection() {
   const scrollToContact = () => {
