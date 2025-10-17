@@ -8,9 +8,9 @@ import {
   Sparkles,
   CheckCircle2,
 } from "lucide-react";
-import orthodonticsImage from "@assets/stock_images/orthodontic_treatmen_1b8e7584.jpg";
-import implantImage from "@assets/stock_images/dental_implant_surge_57321743.jpg";
-import aestheticImage from "@assets/stock_images/teeth_whitening_prof_67c405ae.jpg";
+import orthodonticsImage from "@assets/stock_images/orthodontic_treatmen_903f0990.jpg";
+import implantImage from "@assets/stock_images/dental_implant_surge_1dd93ef6.jpg";
+import aestheticImage from "@assets/stock_images/teeth_whitening_prof_d0839cde.jpg";
 
 export function ServicesSection() {
   const featuredServices = [
@@ -19,18 +19,21 @@ export function ServicesSection() {
       title: "Tratament Ortodontic Complet",
       subtitle: "Ortodonție",
       description: "Transformare completă cu bretele dentare",
+      image: orthodonticsImage,
     },
     {
       number: "2",
       title: "Implant Dentar și Coroană",
       subtitle: "Implantologie",
       description: "Înlocuire dinți lipsă cu implant",
+      image: implantImage,
     },
     {
       number: "3",
       title: "Albire Dentară Profesională",
       subtitle: "Estetică Dentară",
       description: "Rezultate spectaculoase de albire",
+      image: aestheticImage,
     },
   ];
 
@@ -85,15 +88,18 @@ export function ServicesSection() {
           {featuredServices.map((service, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover-elevate transition-all duration-300 relative"
+              className="overflow-hidden hover-elevate transition-all duration-300 relative group"
               data-testid={`card-featured-service-${index}`}
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center">
-                <span className="text-[120px] md:text-[140px] font-bold text-primary/10 absolute">
-                  {service.number}
-                </span>
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6">
-                  <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  <div className="inline-block px-3 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
                     {service.subtitle}
                   </div>
                 </div>
