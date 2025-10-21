@@ -7,10 +7,23 @@ import {
   Scissors,
   Sparkles,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+  Heart,
 } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useEffect } from "react";
 import orthodonticsImage from "@assets/stock_images/orthodontic_treatmen_903f0990.jpg";
 import implantImage from "@assets/stock_images/dental_implant_surge_1dd93ef6.jpg";
 import aestheticImage from "@assets/stock_images/teeth_whitening_prof_d0839cde.jpg";
+
+// Import imagini copii pentru stomatologie pediatrică
+import kidsImage1 from "@assets/photo_1_2025-10-21_19-13-57_1761063397194.jpg";
+import kidsImage2 from "@assets/photo_3_2025-10-21_19-13-57_1761063397194.jpg";
+import kidsImage3 from "@assets/photo_4_2025-10-21_19-13-57_1761063397195.jpg";
+import kidsImage4 from "@assets/photo_5_2025-10-21_19-13-57_1761063397195.jpg";
+import kidsImage5 from "@assets/photo_6_2025-10-21_19-13-57_1761063397195.jpg";
 
 export function ServicesSection() {
   const featuredServices = [
@@ -36,6 +49,52 @@ export function ServicesSection() {
       image: aestheticImage,
     },
   ];
+
+  const kidsImages = [
+    {
+      src: kidsImage1,
+      alt: "Tratament dentar prietenos pentru copii - Croitor Dental Clinic Chișinău",
+    },
+    {
+      src: kidsImage2,
+      alt: "Cabinet stomatologic pentru copii echipat modern - Croitor Dental Clinic",
+    },
+    {
+      src: kidsImage3,
+      alt: "Îngrijire dentară profesională pentru cei mici - Stomatologie Pediatrică Chișinău",
+    },
+    {
+      src: kidsImage4,
+      alt: "Experiență plăcută la dentist pentru copii - Croitor Dental Clinic",
+    },
+    {
+      src: kidsImage5,
+      alt: "Medici specializați în stomatologie pediatrică - Croitor Dental Clinic Chișinău",
+    },
+  ];
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: "start",
+    },
+    [
+      Autoplay({ 
+        delay: 3500,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      })
+    ]
+  );
+
+  const scrollPrev = () => emblaApi?.scrollPrev();
+  const scrollNext = () => emblaApi?.scrollNext();
+
+  useEffect(() => {
+    if (emblaApi) {
+      emblaApi.reInit();
+    }
+  }, [emblaApi]);
 
   const services = [
     {
@@ -115,6 +174,94 @@ export function ServicesSection() {
             </Card>
           ))}
         </div>
+
+        {/* Stomatologie Pediatrică - Carusel Special */}
+        <Card className="mb-8 sm:mb-12 md:mb-16 overflow-hidden" data-testid="card-pediatric-dentistry">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-6 flex flex-col justify-center order-2 md:order-1">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Heart className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                  </div>
+                  <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-semibold">
+                    Servicii Speciale
+                  </div>
+                </div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground">
+                  Stomatologie Pediatrică
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Oferim tratamente stomatologice specializate pentru copii într-un mediu prietenos și confortabil. Echipa noastră este pregătită să lucreze cu cei mici cu grijă, răbdare și profesionalism, transformând vizita la dentist într-o experiență pozitivă.
+                </p>
+              </div>
+              
+              <div className="space-y-2 sm:space-y-3">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-foreground">
+                    Medici specializați în tratarea copiilor
+                  </span>
+                </div>
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-foreground">
+                    Cabinet modern adaptat pentru cei mici
+                  </span>
+                </div>
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-foreground">
+                    Experiență plăcută și fără stres
+                  </span>
+                </div>
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-foreground">
+                    Prevenție și tratamente complete
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative order-1 md:order-2">
+              <div className="overflow-hidden h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px]" ref={emblaRef}>
+                <div className="flex h-full">
+                  {kidsImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className="flex-[0_0_100%] min-w-0 h-full"
+                    >
+                      <div className="relative h-full">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                onClick={scrollPrev}
+                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex items-center justify-center transition-all hover-elevate z-10"
+                data-testid="button-kids-carousel-prev"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
+              </button>
+              <button
+                onClick={scrollNext}
+                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 hover:bg-white shadow-lg rounded-full flex items-center justify-center transition-all hover-elevate z-10"
+                data-testid="button-kids-carousel-next"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
+              </button>
+            </div>
+          </div>
+        </Card>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => {
