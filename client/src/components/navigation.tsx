@@ -99,7 +99,7 @@ export function Navigation() {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+37378005754"
+              href="tel:+37360511388"
               className={`flex items-center gap-2 text-sm transition-colors ${
                 isScrolled
                   ? "text-muted-foreground hover:text-primary"
@@ -108,7 +108,7 @@ export function Navigation() {
               data-testid="link-phone"
             >
               <Phone className="w-4 h-4" />
-              <span>+373 78 00 57 54</span>
+              <span>+373 60 51 13 88</span>
             </a>
             <Button
               onClick={() => scrollToSection("contact")}
@@ -154,12 +154,12 @@ export function Navigation() {
             ))}
             <div className="pt-4 border-t border-border space-y-3">
               <a
-                href="tel:+37378005754"
+                href="tel:+37360511388"
                 className="flex items-center gap-2 px-4 py-3 text-sm text-muted-foreground hover-elevate rounded-lg"
                 data-testid="link-mobile-phone"
               >
                 <Phone className="w-4 h-4" />
-                <span>+373 78 00 57 54</span>
+                <span>+373 60 51 13 88</span>
               </a>
               <Button
                 onClick={() => scrollToSection("contact")}

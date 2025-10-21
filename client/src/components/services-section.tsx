@@ -43,10 +43,10 @@ export function ServicesSection() {
     },
     {
       number: "3",
-      title: "Albire Dentară Profesională",
-      subtitle: "Estetică Dentară",
-      description: "Rezultate spectaculoase de albire",
-      image: aestheticImage,
+      title: "Tratament Dentar pentru Copii",
+      subtitle: "Stomatologie Pediatrică",
+      description: "Îngrijire profesională pentru cei mici",
+      image: kidsImage1,
     },
   ];
 
