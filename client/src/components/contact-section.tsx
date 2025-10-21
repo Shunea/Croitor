@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Facebook, Instagram, Send, CheckCircle } from "lucide-react";
+import { SiWhatsapp, SiViber, SiTelegram } from "react-icons/si";
 
 export function ContactSection() {
   const { toast } = useToast();
@@ -212,23 +213,89 @@ export function ContactSection() {
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3 w-full min-w-0">
                     <div className="font-semibold text-foreground">Telefon</div>
-                    <div className="space-y-1">
-                      <a
-                        href="tel:+37378005754"
-                        className="block text-muted-foreground hover:text-primary transition-colors break-all"
-                        data-testid="link-phone-1"
-                      >
-                        +373 78 00 57 54
-                      </a>
-                      <a
-                        href="tel:+37360511388"
-                        className="block text-muted-foreground hover:text-primary transition-colors break-all"
-                        data-testid="link-phone-2"
-                      >
-                        +373 60 51 13 88
-                      </a>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <a
+                          href="tel:+37378005754"
+                          className="block text-muted-foreground hover:text-primary transition-colors break-all mb-2"
+                          data-testid="link-phone-1"
+                        >
+                          +373 78 00 57 54
+                        </a>
+                        <div className="flex gap-2 flex-wrap">
+                          <a
+                            href="https://wa.me/37378005754"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg text-sm font-semibold transition-colors"
+                            data-testid="link-whatsapp-1"
+                          >
+                            <SiWhatsapp className="w-4 h-4" />
+                            WhatsApp
+                          </a>
+                          <a
+                            href="viber://chat?number=%2B37378005754"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#7360F2]/10 hover:bg-[#7360F2]/20 text-[#7360F2] rounded-lg text-sm font-semibold transition-colors"
+                            data-testid="link-viber-1"
+                          >
+                            <SiViber className="w-4 h-4" />
+                            Viber
+                          </a>
+                          <a
+                            href="https://t.me/+37378005754"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] rounded-lg text-sm font-semibold transition-colors"
+                            data-testid="link-telegram-1"
+                          >
+                            <SiTelegram className="w-4 h-4" />
+                            Telegram
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <a
+                          href="tel:+37360511388"
+                          className="block text-muted-foreground hover:text-primary transition-colors break-all mb-2"
+                          data-testid="link-phone-2"
+                        >
+                          +373 60 51 13 88
+                        </a>
+                        <div className="flex gap-2 flex-wrap">
+                          <a
+                            href="https://wa.me/37360511388"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg text-sm font-semibold transition-colors"
+                            data-testid="link-whatsapp-2"
+                          >
+                            <SiWhatsapp className="w-4 h-4" />
+                            WhatsApp
+                          </a>
+                          <a
+                            href="viber://chat?number=%2B37360511388"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#7360F2]/10 hover:bg-[#7360F2]/20 text-[#7360F2] rounded-lg text-sm font-semibold transition-colors"
+                            data-testid="link-viber-2"
+                          >
+                            <SiViber className="w-4 h-4" />
+                            Viber
+                          </a>
+                          <a
+                            href="https://t.me/+37360511388"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] rounded-lg text-sm font-semibold transition-colors"
+                            data-testid="link-telegram-2"
+                          >
+                            <SiTelegram className="w-4 h-4" />
+                            Telegram
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
