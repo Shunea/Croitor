@@ -169,9 +169,24 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <div>
-              © {new Date().getFullYear()} Croitor Dental Clinic. Toate
-              drepturile rezervate.
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <div>
+                © {new Date().getFullYear()} Croitor Dental Clinic. Toate
+                drepturile rezervate.
+              </div>
+              <div className="hidden sm:block text-muted-foreground/50">|</div>
+              <div className="text-xs sm:text-sm">
+                Website creat de{" "}
+                <a
+                  href="https://ishunea.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                  data-testid="link-ishunea"
+                >
+                  iShunea Tech Solutions
+                </a>
+              </div>
             </div>
             <div className="flex gap-6">
               <button
