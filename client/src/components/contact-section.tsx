@@ -240,15 +240,15 @@ export function ContactSection() {
                       
                       <div>
                         <a
-                          href="tel:+37378005754"
+                          href="tel:+37379005754"
                           className="block text-muted-foreground hover:text-primary transition-colors break-all mb-2"
                           data-testid="link-phone-2"
                         >
-                          +373 78 00 57 54
+                          +373 79 00 57 54
                         </a>
                         <div className="flex gap-2 flex-wrap">
                           <a
-                            href="https://wa.me/37378005754"
+                            href="https://wa.me/37379005754"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg text-sm font-semibold transition-colors"
@@ -258,7 +258,7 @@ export function ContactSection() {
                             WhatsApp
                           </a>
                           <a
-                            href="viber://chat?number=%2B37378005754"
+                            href="viber://chat?number=%2B37379005754"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#7360F2]/10 hover:bg-[#7360F2]/20 text-[#7360F2] rounded-lg text-sm font-semibold transition-colors"
                             data-testid="link-viber-2"
                           >
@@ -266,7 +266,7 @@ export function ContactSection() {
                             Viber
                           </a>
                           <a
-                            href="https://t.me/+37378005754"
+                            href="https://t.me/+37379005754"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] rounded-lg text-sm font-semibold transition-colors"

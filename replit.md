@@ -51,7 +51,7 @@ Create a high-quality, professional dental clinic website to:
 
 ## Contact Information
 - **Address**: Str. Miorița 14, Chișinău, Republica Moldova
-- **Phone**: +373 78 00 57 54, +373 60 51 13 88
+- **Phone**: +373 79 00 57 54, +373 60 51 13 88
 - **Email**: croitor.dental.clinic@gmail.com
 - **Facebook**: https://www.facebook.com/p/Croitor-Dental-Clinic-100084048187913/
 - **Instagram**: https://www.instagram.com/croitordentalclinic

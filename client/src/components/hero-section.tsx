@@ -59,7 +59,7 @@ export function HeroSection() {
               className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20"
               data-testid="button-hero-call"
             >
-              <a href="tel:+37378005754" className="truncate">Sună Acum: +373 78 00 57 54</a>
+              <a href="tel:+37379005754" className="truncate">Sună Acum: +373 79 00 57 54</a>
             </Button>
           </div>
 
