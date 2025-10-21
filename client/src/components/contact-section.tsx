@@ -1,9 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
-import { insertContactSchema, type InsertContact } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -16,14 +13,21 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Facebook, Instagram, Send, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Send } from "lucide-react";
 import { SiWhatsapp, SiViber, SiTelegram } from "react-icons/si";
 
-export function ContactSection() {
-  const { toast } = useToast();
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Numele trebuie să conțină cel puțin 2 caractere"),
+  phone: z.string().min(8, "Numărul de telefon este invalid"),
+  email: z.string().email("Adresa de email este invalidă"),
+  message: z.string().min(10, "Mesajul trebuie să conțină cel puțin 10 caractere"),
+});
 
-  const form = useForm<InsertContact>({
-    resolver: zodResolver(insertContactSchema),
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
+export function ContactSection() {
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       phone: "",
@@ -32,33 +36,19 @@ export function ContactSection() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      return await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: (response: any) => {
-      toast({
-        title: (
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-primary" />
-            <span>Mesaj trimis cu succes!</span>
-          </div>
-        ) as any,
-        description: response.message || "Vă vom contacta în curând. Mulțumim!",
-      });
-      form.reset();
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Eroare la trimitere",
-        description: error.message || "A apărut o eroare. Vă rugăm să încercați din nou.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = async (data: InsertContact) => {
-    contactMutation.mutate(data);
+  const onSubmit = (data: ContactFormData) => {
+    const subject = encodeURIComponent(`Solicitare de contact de la ${data.name}`);
+    const body = encodeURIComponent(
+      `Nume: ${data.name}\n` +
+      `Telefon: ${data.phone}\n` +
+      `Email: ${data.email}\n\n` +
+      `Mesaj:\n${data.message}`
+    );
+    
+    const mailtoLink = `mailto:croitor.dental.clinic@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
+    form.reset();
   };
 
   return (
@@ -161,20 +151,10 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   className="w-full"
-                  disabled={contactMutation.isPending}
                   data-testid="button-submit-contact"
                 >
-                  {contactMutation.isPending ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin mr-2" />
-                      Se trimite...
-                    </>
-                  ) : (
-                    <>
-                      Trimite mesajul
-                      <Send className="ml-2 w-4 h-4" />
-                    </>
-                  )}
+                  Deschide Gmail
+                  <Send className="ml-2 w-4 h-4" />
                 </Button>
               </form>
             </Form>
