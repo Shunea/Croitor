@@ -2,6 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect } from "react";
+import teamImage from "@assets/croitor_1760710964150.jpg";
 import clinicImage1 from "@assets/Imagine WhatsApp 2025-10-21 la 19.08.03_6e55b073_1761063167760.jpg";
 import clinicImage2 from "@assets/Imagine WhatsApp 2025-10-21 la 19.08.03_23b9c3fd_1761063167761.jpg";
 import clinicImage3 from "@assets/Imagine WhatsApp 2025-10-21 la 19.08.03_caa0e2ef_1761063167761.jpg";
@@ -15,6 +16,10 @@ export function AboutSection() {
   ];
 
   const carouselImages = [
+    {
+      src: teamImage,
+      alt: "Dr. Croitor Alexei și Dr. Croitor Liliana - Echipa Croitor Dental Clinic din Chișinău",
+    },
     {
       src: clinicImage1,
       alt: "Biroul modern al clinicii Croitor Dental Clinic din Chișinău",

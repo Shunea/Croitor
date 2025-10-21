@@ -80,7 +80,7 @@ export function ServicesSection() {
             Gamă complexă de servicii și tratamente stomatologice
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
-            Descoperì rezultatele remarcabile obținute în tratamentele dentare pe care le oferim.
+            Descoperì rezultatele remarcabile obținute în tratamentele dentare pe care le oferim. Tratăm cu grijă și profesionalism atât adulți cât și copii.
           </p>
         </div>
 
